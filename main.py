@@ -34,7 +34,7 @@ elif sproba_3 > d:
 elif sproba_3 == d:
     print("Ви вгадали!")
 #4
-for e in range(int(input("Введіть число №1: ")), int(input("Введіть число №1: "))):
+for e in range(int(input("Введіть число №1: ")), int(input("Введіть число №2: "))):
     print(e)
 #5
 def even_numbers_reverse(n):
@@ -63,8 +63,6 @@ else:
 A = int(input("Введіть число №1: "))
 B = int(input("Введіть число №2: "))
 C = input("Введіть арефметичну дію (+, -, *, /): ")
-if C != "+" or "-" or "*" or "/":
-    print("це не арифметична дія!")
 if C == "+":
     print(A + B)
 elif C == "-":
@@ -75,3 +73,5 @@ elif C == "/":
     print(A / B)
 elif C == "/" and B == 0:
     print("Ділення на нуль")
+else:
+    print("Це не арефметична дія!")
