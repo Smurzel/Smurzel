@@ -67,3 +67,4 @@ class Product:
 product1 = Product("Молоко", 45, 2)
 print("Загальна вартість товарів =", product1.calculate_total_price())
 product1.display_info()
+
