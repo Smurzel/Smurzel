@@ -1,3 +1,6 @@
+from itertools import product
+
+
 class Product:
     def __init__(self, name, price, availability):
         self.name = name
@@ -17,6 +20,14 @@ class Cart:
                 print(product.name, product.price, product.availability)
         else:
             print(f"There are no passengers in {self.name}.")
+    def delete_product(self, *args):
+        for product in args:
+            self.products.remove(product)
+    def calculate_total_cost(self, *args):
+        print(milk.price + cheese.price + sausage.price
+              + bottle_of_water.price + tea.price + coffee.price
+              + bread.price + eggs.price + butter.price
+              + mayonnaise.price + ketchup.price, "is total cost of", {self.name})
 
 milk = Product("milk", 45, "available")
 cheese = Product("cheese", 80, "available")
@@ -32,4 +43,6 @@ ketchup = Product("ketchup", 35, "available")
 cart = Cart("Кошик №1")
 cart.add_product(milk, cheese, sausage, bottle_of_water,
                  tea, coffee, bread, eggs, butter, mayonnaise, ketchup)
+cart.delete_product()
 cart.print_product_names()
+cart.calculate_total_cost()
