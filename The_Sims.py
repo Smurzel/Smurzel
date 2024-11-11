@@ -18,7 +18,15 @@ class Human:
     def get_home(self):
         self.home = House()
     def get_car(self):
-        self.car = Auto(brands_of_car)
+        self.car = Auto(brand_list)
+
+class Pet:
+    def __init__(self, name="None"):
+        self.name = name
+        self.energy = 100
+        self.gladness = 50
+        self.satiety = 50
+
 
 class House:
     def __init__(self):
@@ -45,7 +53,7 @@ class Job:
         self.salary = job_list[self.job]["salary"]
         self.gladness_less = job_list[self.job]["gladness_less"]
 
-brands_of_car = {"BMW":{"fuel":100, "strength":100,"consumption": 6},
+brand_list = {"BMW":{"fuel":100, "strength":100,"consumption": 6},
 "Lada":{"fuel":50, "strength":40,"consumption": 10},
 "Volvo":{"fuel":70, "strength":150,"consumption": 8},
 "Ferrari":{"fuel":80, "strength":120,"consumption": 14},
