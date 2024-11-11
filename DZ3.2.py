@@ -24,10 +24,7 @@ class Cart:
         for product in args:
             self.products.remove(product)
     def calculate_total_cost(self, *args):
-        print(milk.price + cheese.price + sausage.price
-              + bottle_of_water.price + tea.price + coffee.price
-              + bread.price + eggs.price + butter.price
-              + mayonnaise.price + ketchup.price, "is total cost of", {self.name})
+        print(sum(product.price for product in self.products))
 
 milk = Product("milk", 45, "available")
 cheese = Product("cheese", 80, "available")
@@ -40,6 +37,7 @@ eggs = Product("eggs", 30, "available")
 butter = Product("butter", 70, "available")
 mayonnaise = Product("mayonnaise", 35, "available")
 ketchup = Product("ketchup", 35, "available")
+pasta = Product("pasta", 40, "available")
 cart = Cart("Кошик №1")
 cart.add_product(milk, cheese, sausage, bottle_of_water,
                  tea, coffee, bread, eggs, butter, mayonnaise, ketchup)
