@@ -26,7 +26,26 @@ class Pet:
         self.energy = 100
         self.gladness = 50
         self.satiety = 50
-
+    def eat(self):
+        self.satiety += 20
+        self.energy += 10
+        if self.satiety > 100:
+            self.satiety = 100
+        if self.energy > 100:
+            self.energy = 100
+        print(f"{self.name} поїв.")
+    def sleep(self):
+        self.energy += 50
+        self.satiety -= 15
+        if self.energy > 100:
+            self.energy = 100
+        print(f"{self.name} поспав.")
+    def play(self):
+        self.energy -= 25
+        self.satiety -= 10
+        if self.energy == 0:
+            print(f"{self.name} занадто втомлений, щоб гратися.")
+        print(f"{self.name} погрався і втомився.")
 
 class House:
     def __init__(self):
