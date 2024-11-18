@@ -18,7 +18,7 @@ class Department:
     def delete_employee(self, *args):
         for employee in args:
             self.employees.remove(employee)
-    def calculate_total_cost(self, *args):
+    def calculate_total_salary(self, *args):
         print(sum(employee.salary for employee in self.employees))
 
 Max = Employee("Max", 80000, "2D artist")
